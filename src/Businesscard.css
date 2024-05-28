@@ -1,16 +1,242 @@
-.business-card {
+.card {
+  width: 330px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card.light {
+  background-color: rgb(233, 233, 233);
+  color: black;
+}
+
+.card.dark {
+  background-color: #333;
+  color: white;
+}
+
+.profile-pic {
+  width: 50%;
+  border-radius: 400px;
+  display: block;
+  margin: auto;
+
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+
+}
+
+.title {
+  font-size: 12px;
+  color: #7e57c2;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1em;
+}
+
+.link-button-mail {
+  font-size: 12px;
+
+  display: inline-flex;
+  justify-content: center;
+  margin: 0px 5px;
+
+  align-items: center;
+  background-color: rgb(208, 204, 204);
+  color: black;
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.link-button-linkedin {
+  font-size: 12px;
+  margin: 0px 5px;
+
+  display: flex;
+  align-items: center;
+  background-color: #0C4FB4;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.link-button-github {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.link-button-github .icon {
+  margin-right: 5px;
+}
+
+.link-button-github:hover {
+  background-color: gray;
+}
+
+
+
+
+.link-button-mail .icon {
+  margin-right: 5px;
+}
+
+.link-button-mail:hover {
+  background-color: gray;
+}
+.link-button-linkedin .icon {
+  margin-right: 5px;
+}
+
+.link-button-linkedin:hover {
+  background-color: gray;
+}
+.main--title{
+  text-align:left;
+  margin-bottom: 10px;
+
+
+}
+.about {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align:left;
+}
+
+
+.info--container > a:hover {
+    opacity: 0.8;
+}
+
+.theme-toggle {
+  padding: 7px 8px 5px 8px;
+  border: none;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  transition: background-color 0.3s;
+  display:block;
+}
+
+.theme-toggle:hover {
+  background-color: gray;
+}
+
+
+.icon-light{
+  text-decoration: none;
+  margin: 0 2px;
+  color: rgb(255, 255, 255);
+  padding: 5px 5px 0px 5px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  position: absolute;
+  left: 365px;
+  top: 5px;
+  opacity: 0.8;}
+
+  .carousel {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 150px;
-    margin: 0 auto;
-    margin-top: calc(50vh - 75px); /* Centers the card vertically */
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .carousel-button {
+    color: black;
+    border: none;
+    margin-left: 10px;
+    margin-right: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 45%;
+    transition: background-color 0.3s;
+  }
+  
+  .carousel-button:hover {
+    background-color: rgb(183, 183, 183);
+  }
+  
+  .carousel-images {
+    display: flex;
+    overflow: hidden;
+    width: 60%;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .carousel-image-container {
+    position: relative;
+    display: inline-block;
     text-align: center;
   }
   
+  .carousel-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    transition: transform 0.3s, filter 0.3s;
+  }
+  
+  .carousel-image-container:hover .carousel-image {
+    transform: scale(1.1);
+    filter: brightness(70%);
+  }
+  
+  .carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .carousel-image-container:hover .carousel-overlay {
+    opacity: 1;
+  }
+  
+  .carousel-description {
+    color: white;
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .projects{
+    text-align: center;
+    font-size: 10px;
+    color: #767676;
+  }
